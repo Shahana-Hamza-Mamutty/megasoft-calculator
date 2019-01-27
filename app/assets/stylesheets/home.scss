@@ -1,0 +1,97 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #80808026;      
+}
+input{
+  border: none;
+}
+button {
+  height: 66px;
+  width: 66px;
+  margin: 10px 4px;
+  box-shadow: inset 1px 1px 50px  #0066FF;
+  border: none !important;
+}
+.btn-info {
+  background-color: #8080803b;
+  box-shadow: none;
+  color: #696060;
+}
+*:focus {
+    outline: 0 !important;
+}
+#allClear {
+  box-shadow: inset 1px 1px 50px  #990000;
+  border: none;
+}
+#clear {
+  box-shadow: inset 1px 1px 50px  #CC6600;
+  border: none;
+}
+#equals{
+  box-shadow: inset 1px 1px 50px #006633;
+  border: none;
+}
+/* Hidden button for formatting sake */
+#blank {
+  visibility: hidden;
+}
+.calcBG {
+  width: 40%;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #b1a9a9ad;
+}
+.screen {
+  width: 89%;
+  height: 40px;
+  border: 1px solid #b1a9a9ad;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+small {
+  color: #fff;
+  font-weight: bold;
+}
+.ops {
+  background-color: #9bea53b8 !important;
+}
+.jumbotron {
+    max-height: 138px;
+    font-family: monospace;
+    padding-top: 1%;
+    color: white;
+    background-color: #244963;
+    text-align: center;
+    margin-bottom: 0%;
+  }
+.date_filters {
+  margin-top: 3%;
+  float: left;
+  margin-left: 10%;
+  display: inline-flex;
+}
+.filter {
+  margin-left: 15%;
+}
+.reports{
+  margin-top: 1%;
+  float: left;
+  margin-left: 16%;
+  display: inline-flex;
+}
+.report_btn{
+  margin-left: 10%;
+}
+
+
+

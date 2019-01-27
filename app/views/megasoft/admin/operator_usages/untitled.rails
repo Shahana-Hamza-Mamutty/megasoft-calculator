@@ -1,0 +1,5 @@
+<%= form_tag(megasoft_admin_path, method: "get", class: "form-inline") do %>
+        <div class="filter"><%= text_field_tag :start_date, nil, class: 'datepicker', placeholder: 'Start date' %></div>
+        <div class="filter"><%= text_field_tag :end_data, nil, class: 'datepicker', placeholder: 'End date' %></div>
+        <div class="filter"><%= submit_tag "Submit", class: 'btn btn-default' %></div>
+    <% end %>

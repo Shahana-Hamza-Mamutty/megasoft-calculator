@@ -1,0 +1,39 @@
+<div class="container text-center" id="calc">
+  <div class="calcBG col-md-3 col-md-offset-3 text-center">
+    <div class="row" id="result">
+      <input type="text" class="screen text-right" name="result" readonly>
+    </div>
+    <div class="row">
+      <button id="allClear" type="button" data-val="allClear" class="btn btn-danger">AC</button>
+      <button id="clear" type="button" data-val="clear" class="btn btn-warning" style="width: 32%;">CE</button>
+      <button id="<%= @operators[7][:action] %>" type="button" data-val="<%= @operators[7][:action] %>" class="btn btn-info ops"><%= @operators[7][:display_sign] %></button>
+      <button id="<%= @operators[8][:action] %>" type="button" data-val="<%= @operators[8][:action] %>" class="btn btn-info ops"><%= @operators[8][:display_sign] %></button>
+    </div>
+    <div class="row">
+      <button id="7" type="button" data-val="7" class="btn btn-info num">7</button>
+      <button id="8" type="button" data-val="8" class="btn btn-info num">8</button>
+      <button id="9" type="button" data-val="9" class="btn btn-info num">9</button>
+      <button id="<%= @operators[5][:action] %>" type="button" data-val="<%= @operators[5][:action] %>" class="btn btn-info ops"><%= @operators[5][:display_sign] %></button>
+      <button id="<%= @operators[6][:action] %>" type="button" data-val="<%= @operators[6][:action] %>" class="btn btn-info ops"><%= @operators[6][:display_sign] %></button>
+    </div>
+    <div class="row">
+      <button id="4" type="button" data-val="4" class="btn btn-info num">4</button>
+      <button id="5" type="button" data-val="5" class="btn btn-info num">5</button>
+      <button id="6" type="button" data-val="6" class="btn btn-info num">6</button>
+      <button id="<%= @operators[3][:action] %>" type="button" data-val="<%= @operators[3][:action] %>" class="btn btn-info ops"><%= @operators[3][:display_sign] %></button>
+      <button id="<%= @operators[4][:action] %>" type="button" data-val="<%= @operators[4][:action] %>" class="btn btn-info ops"><%= @operators[4][:display_sign] %></button>
+    </div>
+    <div class="row">
+      <button id="1" type="button" data-val="1" class="btn btn-info num">1</button>
+      <button id="2" type="button" data-val="2" class="btn btn-info num">2</button>
+      <button id="3" type="button" data-val="3" class="btn btn-info num">3</button>
+      <button id="<%= @operators[2][:action] %>" type="button" data-val="<%= @operators[2][:action] %>" class="btn btn-info ops" style="width: 32%;"><%= @operators[2][:display_sign] %></button>
+    </div>
+    <div class="row">
+      <button id="0" type="button" data-val="0" class="btn btn-info num">0</button>
+      <button id="." type="button" data-val="." class="btn btn-info num">.</button>
+      <button id="equals" type="button" data-val="=" class="btn btn-success">=</button>
+      <button id="/" type="button" data-val="<%= @operators[1][:display_sign] %>" class="btn btn-info ops" style="width: 32%;"><%= @operators[1][:display_sign] %></button>
+    </div>
+  </div>
+</div>
