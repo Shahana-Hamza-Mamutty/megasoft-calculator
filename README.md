@@ -1,6 +1,6 @@
 # README
 
-The app consists of one Home page with calculator, one admin page to fetch reports and one API for mathematical operations. Its deployed in heroku and is accessible via https://megasoft-calc.herokuapp.com/. Please follow the steps to setup via docker. Please dont forget to edit the application.yml.example as application.yml and add config variables. In case running in docker DB_USERNAME, DB_PASSWORD and DB_NAME are not necessary. Home page url - https://megasoft-calc.herokuapp.com/, Admin url - https://megasoft-calc.herokuapp.com/megasoft/admin, Calculate API - https://megasoft-calc.herokuapp.com/megasoft/api/v1/calculator/calculate.
+The app consists of one Home page with calculator, one admin page to fetch reports and one API for mathematical operations. Its deployed in heroku and is accessible via https://megasoft-calc.herokuapp.com/. Please follow the steps to setup via docker. Please dont forget to edit the application.yml.example as application.yml and add config variables. Home page url - https://megasoft-calc.herokuapp.com/, Admin url - https://megasoft-calc.herokuapp.com/megasoft/admin, Calculate API - https://megasoft-calc.herokuapp.com/megasoft/api/v1/calculator/calculate.
 
 To Setup the file in local:
 
@@ -25,7 +25,11 @@ To Setup the file in local:
 * To run test cases, `docker-compose run app bundle exec rspec`
 
 ## API
-Used for evaluating an operation with two inputs. Inputs are passed as comma separated string. A sample of request body to calculate sum of 2 and 3 is as follow. The api is `/megasoft/api/v1/calculator/calculate`. 
+This api is for evaluating the expression. The api is `/megasoft/api/v1/calculator/calculate`. Inputs are passed as comma separated string.
+
+Add, Multiply - Supports more than two inputs. Sample input: "1,3,9,-4,3.44"
+Square root, Cube root, Factorial - Single input operators. Sample input: "45"
+Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: "10,-4"
 
 Request Body
 
@@ -39,14 +43,10 @@ Request Headers
 
 ```sh
 Content-Type: application/json
-Authorization: Token token=7381a978f7dd7f9a1117
+Authorization: Token token=
 ```
 
 Different operators available are:
-
-Add, Multiply - Supports more than two inputs. Sample input: "1,3,9,-4,3.44"
-Square root, Cube root, Factorial - Single input operators. Sample input: "45"
-Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: "10,-4"
 
 ```json
 {
