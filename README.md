@@ -43,7 +43,7 @@ Request Headers
 
 ```sh
 Content-Type: application/json
-Authorization: Token token=
+Authorization: Token token=7381a978f7dd7f9a1117
 ```
 
 Different operators available are:
