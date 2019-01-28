@@ -1,0 +1,15 @@
+# Example Database Config File
+default: &default
+  adapter: postgis
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %> # Should use DATABASE_URL to be consistent with Docker DB config
+  # host: localhost # If not using DATABASE_URL, then just use 'host'
+
+development:
+  <<: *default
+  database: danube_development
+
+test:
+  <<: *default
+  database: danube_test
