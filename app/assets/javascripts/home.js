@@ -10,6 +10,9 @@ $(document).ready(function() {
 
     executeOperation = function(e) { 
       url = '/megasoft/api/v1/calculator/calculate';
+      $(':button').prop('disabled', true);
+      console.log('inputs:', num1.join("")+','+num2.join(""))
+      console.log('operator:',operator)
       $.ajax({
         type: 'POST',
         url: url,
@@ -19,6 +22,7 @@ $(document).ready(function() {
         },
         dataType: "json",
         success: function (data) {
+          $(':button').prop('disabled', false); 
           console.log(data.result)
           if (data.result == null){
             clearData()
@@ -35,6 +39,7 @@ $(document).ready(function() {
           }
         },
         error: function(data) { 
+          $(':button').prop('disabled', false); 
           clearData()
           $('.screen').val('error')
         }

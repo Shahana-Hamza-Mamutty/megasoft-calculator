@@ -8,9 +8,7 @@ class Operator < ApplicationRecord
   def calculate(input)
     input = parse_input(input)
     validate_input(input)
-    p "-------------------------validated"
     result = evaluate(input)
-    p result
     track_usage(input)
     result
   end

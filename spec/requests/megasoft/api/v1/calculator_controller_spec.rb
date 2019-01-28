@@ -222,7 +222,7 @@ RSpec.describe Megasoft::Api::V1::CalculatorController, type: :request do
       it "should return correct result if all are positive numbers" do
         request_data = {input: '12', operation: 'cbrt' }
         post "/megasoft/api/v1/calculator/calculate", params: request_data, headers: {'Authorization' => "Token token=#{ENV['API_AUTHENTICATION_TOKEN']}"}
-        expect(JSON.parse(response.body)['result']).to eq 2.2894284851066637
+        expect(JSON.parse(response.body)['result'].try(:round, 5)).to eq 2.28943
       end
 
       it "should raise error if inout length is greater than 1" do
@@ -234,7 +234,7 @@ RSpec.describe Megasoft::Api::V1::CalculatorController, type: :request do
       it "should return correct result if its a negative number" do
         request_data = {input: '-2', operation: 'cbrt' }
         post "/megasoft/api/v1/calculator/calculate", params: request_data, headers: {'Authorization' => "Token token=#{ENV['API_AUTHENTICATION_TOKEN']}"}
-        expect(JSON.parse(response.body)['result']).to eq -1.2599210498948732
+        expect(JSON.parse(response.body)['result'].try(:round, 5)).to eq -1.25992
       end
 
       it "should return error status 400 if input contains string" do
