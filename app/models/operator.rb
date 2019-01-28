@@ -14,7 +14,7 @@ class Operator < ApplicationRecord
   end
 
   def parse_input(input)
-    input.split(',').map{ |val|  (to_integer(val) || to_float(val))}
+    input.map{ |val|  (to_integer(val) || to_float(val))}
   end
 
   def validate_input

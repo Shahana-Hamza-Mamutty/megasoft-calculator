@@ -20,7 +20,7 @@ module Megasoft
         private
 
         def calculator_params
-          params.permit(:operation, :input)
+          params.permit(:operation, input: [])
         end
       
       end

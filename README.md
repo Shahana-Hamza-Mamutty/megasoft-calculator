@@ -27,15 +27,15 @@ To Setup the file in local:
 ## API
 This api is for evaluating the expression. The api is `/megasoft/api/v1/calculator/calculate`. Inputs are passed as comma separated string.
 
-* Add, Multiply - Supports more than two inputs. Sample input: "1,3,9,-4,3.44"
-* Square root, Cube root, Factorial - Single input operators. Sample input: "45"
-* Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: "10,-4"
+* Add, Multiply - Supports more than two inputs. Sample input: [1,3,9,-4,3.44]
+* Square root, Cube root, Factorial - Single input operators. Sample input: [45]
+* Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: [10,-4]
 
 Request Body
 
 ```json
 {
-  "input": "2,3",
+  "input": [2,3],
   "operator": "+"
 }
 ```

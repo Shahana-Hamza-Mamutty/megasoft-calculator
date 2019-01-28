@@ -7,16 +7,24 @@ $(document).ready(function() {
     var float_num1 = false
     var float_num2 = false
     var result = false
+    var input = []
 
     executeOperation = function(e) { 
       url = '/megasoft/api/v1/calculator/calculate';
       $(':button').prop('disabled', true);
-      console.log('inputs:', num1.join("")+','+num2.join(""))
-      console.log('operator:',operator)
+      // console.log("===================", [ num1.join(""), num2.join("")])
+      if (num1.length > 0){
+        input.push(num1.join("")) 
+      }
+      if (num2.length > 0){
+        input.push(num2.join("")) 
+      }
+      console.log("input", [ num1.join(""), num2.join("")])
+      console.log("operator", operator)
       $.ajax({
         type: 'POST',
         url: url,
-        data: { input: (num1.join("")+','+num2.join("")), operation: operator  },
+        data: { input: input, operation: operator },
         beforeSend: function(xhr) {
           xhr.setRequestHeader("Authorization", "Token token=7381a978f7dd7f9a1117")
         },
@@ -36,6 +44,7 @@ $(document).ready(function() {
             float_num2 = false
             result = true
             $('.screen').val(data.result)
+            input = []
           }
         },
         error: function(data) { 
@@ -54,6 +63,7 @@ $(document).ready(function() {
       operator = ""
       next_operator = ""
       result = false
+      input = []
     }
 
     $("button").click(function () {

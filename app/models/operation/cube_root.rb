@@ -1,8 +1,6 @@
 class Operation::CubeRoot < Operator
 
-  def validate_input(input)
-    input  = input.map{ |val|  (to_integer(val) || to_float(val))}
-    
+  def validate_input(input)    
     if input.include?(false) || input.length > 1 || (input.length == 0)
       raise 'Invalid input'
     end
