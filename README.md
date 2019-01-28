@@ -44,6 +44,10 @@ Authorization: Token token=7381a978f7dd7f9a1117
 
 Different operators available are:
 
+Add, Multiply - Supports more than two inputs. Sample input: "1,3,9,-4,3.44"
+Square root, Cube root, Factorial - Single input operators. Sample input: "45"
+Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: "10,-4"
+
 ```json
 {
   "add": "+",
