@@ -1,6 +1,6 @@
 # README
 
-The app consists of one Home page with calculator, one admin page to fetch reports and one API for mathematical operations. Its deployed in heroku and is accessible via https://megasoft-calc.herokuapp.com/. Please follow the steps to setup via docker. Please dont forget to edit the application.yml.example as application.yml and add config variables. Home page url - https://megasoft-calc.herokuapp.com/, Admin url - https://megasoft-calc.herokuapp.com/megasoft/admin, Calculate API - https://megasoft-calc.herokuapp.com/megasoft/api/v1/calculator/calculate.
+The app consists of one Home page with calculator, one admin page to fetch reports and one API for mathematical operations. Its deployed in heroku and is accessible via https://megasoft-calc.herokuapp.com/. Please follow the steps to setup via docker. Please dont forget to edit the application.yml.example as application.yml. Home page url - https://megasoft-calc.herokuapp.com/, Admin url - https://megasoft-calc.herokuapp.com/megasoft/admin, Calculate API - https://megasoft-calc.herokuapp.com/megasoft/api/v1/calculator/calculate.
 
 To Setup the file in local:
 
@@ -27,9 +27,9 @@ To Setup the file in local:
 ## API
 This api is for evaluating the expression. The api is `/megasoft/api/v1/calculator/calculate`. Inputs are passed as comma separated string.
 
-Add, Multiply - Supports more than two inputs. Sample input: "1,3,9,-4,3.44"
-Square root, Cube root, Factorial - Single input operators. Sample input: "45"
-Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: "10,-4"
+* Add, Multiply - Supports more than two inputs. Sample input: "1,3,9,-4,3.44"
+* Square root, Cube root, Factorial - Single input operators. Sample input: "45"
+* Divide, Subtract, Power - Only accepts two inputs at a time. Sample input: "10,-4"
 
 Request Body
 
